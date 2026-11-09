@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Troublemaker Studios | Entrance Experience | Limitless</title>
+<meta name="description" content="Entrance lighting and projection proposal for Troublemaker Studios, December 12, 2026.">
+
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d1113;
+    --ink-2:#131a1b;
+    --slate:#182220;
+    --gold:#e6c17d;
+    --gold-2:#d2a458;
+    --sage:#a9bfa6;
+    --sage-2:#7b9481;
+    --ivory:#eef2f0;
+    --paper:#ced7d2;
+    --mute:#8b9a93;
+    --line:rgba(230,193,125,.16);
+    --line-soft:rgba(230,193,125,.08);
+    --line-sage:rgba(169,191,166,.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);color:var(--paper);
+    font-family:'Archivo',sans-serif;font-weight:300;line-height:1.7;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+
+  .glow{position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(52vw 52vh at 84% 2%, rgba(230,193,125,.12), transparent 62%),
+      radial-gradient(46vw 42vh at 6% 34%, rgba(169,191,166,.07), transparent 58%),
+      radial-gradient(58vw 52vh at 50% 106%, rgba(230,193,125,.075), transparent 60%);}
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.03;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  .wrap{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:0 36px}
+
+  .eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:19px;letter-spacing:.02em;color:var(--gold);}
+  h1,h2,h3,.display{font-family:'Bebas Neue',sans-serif;font-weight:400;color:var(--ivory);line-height:1;letter-spacing:.015em}
+  .serif{font-family:'Cormorant Garamond',serif}
+
+  /* ————— HERO ————— */
+  /* OPTION A (default): no photography. */
+  .hero{position:relative;overflow:hidden;min-height:96vh;display:flex;flex-direction:column;justify-content:space-between;padding:44px 0 56px}
+  .hero-bg{position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(72vw 70vh at 80% -10%, rgba(230,193,125,.20), transparent 60%),
+      radial-gradient(58vw 58vh at 10% 44%, rgba(169,191,166,.085), transparent 58%),
+      radial-gradient(84vw 46vh at 50% 110%, rgba(230,193,125,.11), transparent 60%),
+      linear-gradient(172deg, #111820 0%, var(--ink) 55%, #090d0e 100%);}
+  .hero-bg::before{content:'';position:absolute;inset:0;
+    background-image:linear-gradient(rgba(230,193,125,.05) 1px, transparent 1px);
+    background-size:100% 92px;
+    -webkit-mask-image:radial-gradient(72% 62% at 52% 40%, #000 10%, transparent 76%);
+    mask-image:radial-gradient(72% 62% at 52% 40%, #000 10%, transparent 76%);}
+  .hero-bg::after{content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 62%, rgba(13,17,19,.7) 84%, var(--ink) 100%);}
+
+  /* --- OPTION B: with a hero photograph. Swap for the three .hero-bg rules above.
+  .hero-bg{position:absolute;inset:0;z-index:0;
+    background:
+      linear-gradient(180deg, rgba(13,17,19,.54) 0%, rgba(13,17,19,.66) 42%, rgba(13,17,19,.9) 80%, var(--ink) 100%),
+      radial-gradient(58vw 58vh at 82% 6%, rgba(230,193,125,.16), transparent 60%),
+      url('img/hero.jpg') center 48%/cover no-repeat;}
+  .hero-bg::after{content:'';position:absolute;inset:0;
+    box-shadow:inset 0 -130px 120px -40px var(--ink), inset 0 100px 90px -50px rgba(13,17,19,.65)}
+  --- */
+
+  .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+  .logo{font-family:'Bebas Neue';font-size:27px;letter-spacing:.17em;color:var(--ivory)}
+  .logo img{display:block;width:150px;height:auto}
+  .logo:hover{opacity:.88;transition:opacity .4s}
+  .logo small{display:block;font-family:'Cormorant Garamond';font-style:italic;font-size:13px;letter-spacing:.06em;color:var(--sage-2);margin-top:2px}
+  .forwhom{text-align:right;font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--sage-2);line-height:1.7;font-style:italic}
+  .forwhom b{color:var(--gold);font-weight:600;font-style:normal;display:block;font-family:'Archivo';font-size:13px;letter-spacing:.02em;margin:2px 0 1px}
+
+  .hero-mid{max-width:900px}
+  .hero-rule{width:58px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:26px}
+  .hero .eyebrow{display:block;margin-bottom:24px}
+  .hero h1{font-size:clamp(50px,8.6vw,112px);text-shadow:0 0 90px rgba(230,193,125,.22)}
+  .hero h1 em{font-style:normal;color:var(--gold);display:block}
+  .hero-lede{font-size:clamp(16px,1.9vw,20px);color:var(--paper);max-width:56ch;margin-top:28px;line-height:1.72}
+  .hero-foot{display:flex;flex-wrap:wrap;gap:40px;margin-top:6px}
+  .hf .k{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--sage-2);margin-bottom:2px}
+  .hf .v{font-family:'Archivo';font-size:15px;font-weight:400;color:var(--ivory)}
+
+  /* ————— sections ————— */
+  section{padding:66px 0}
+  .sec-eyebrow{display:block;margin-bottom:16px}
+  .sec-title{font-size:clamp(34px,5vw,60px);max-width:19ch;margin-bottom:20px;text-shadow:0 0 60px rgba(230,193,125,.13)}
+  .sec-intro{font-size:17px;color:var(--paper);max-width:62ch;line-height:1.7}
+
+  /* ————— POSITIONING ————— */
+  .lead-statement{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(27px,3.7vw,46px);line-height:1.28;color:var(--ivory);max-width:23ch}
+  .lead-statement b{font-weight:600;color:var(--gold);font-style:italic}
+  .promise-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px}
+  .promise-col .kk{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--gold);margin-bottom:12px;display:block}
+  .promise-col h3{font-family:'Bebas Neue';font-size:29px;color:var(--ivory);margin-bottom:12px;letter-spacing:.04em}
+  .promise-col p{font-size:15.5px;color:var(--paper);line-height:1.72}
+
+  /* ————— ROOM CARDS ————— */
+  .rooms{display:flex;flex-direction:column;gap:18px}
+  .room{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--ink-2),var(--ink));transition:border-color .6s,transform .6s}
+  .room:hover{border-color:rgba(230,193,125,.32);transform:translateY(-2px)}
+  .room-media{position:relative;min-height:260px;overflow:hidden}
+  .room-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.3s ease}
+  .room:hover .room-media img{transform:scale(1.04)}
+  .room-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,26,27,.24),rgba(19,26,27,.55) 55%,var(--ink-2) 99%)}
+  .room-inner{position:relative;z-index:1;padding:38px 42px}
+  .room-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid var(--line-soft)}
+  .room-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--sage);opacity:.8;margin-bottom:6px}
+  .room-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--gold);margin-bottom:4px}
+  .room h3{font-family:'Bebas Neue';font-size:clamp(29px,4vw,40px);color:var(--ivory);letter-spacing:.03em}
+  .room-price{text-align:right;flex-shrink:0}
+  .room-price .amt{font-family:'Bebas Neue';font-size:31px;color:var(--gold);letter-spacing:.02em;line-height:1.1}
+  .room-price .cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13.5px;color:var(--sage-2)}
+
+  .room-meta{display:flex;flex-wrap:wrap;gap:10px 34px;padding:18px 0 4px}
+  .rm{font-size:13.5px;color:var(--paper)}
+  .rm span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--sage-2);margin-right:7px}
+
+  .spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px 34px;margin-top:20px;padding-top:22px;border-top:1px solid var(--line-soft)}
+  .spec-col .h{font-family:'Archivo';font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
+  .spec-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .spec-col li{font-size:14px;color:var(--paper);line-height:1.5;padding-left:15px;position:relative}
+  .spec-col li::before{content:'—';position:absolute;left:0;top:0;color:var(--gold);opacity:.55}
+
+  .room-crew{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft);font-size:14px;color:var(--paper)}
+  .room-crew b{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:15px;color:var(--gold)}
+
+  .addon{margin-top:16px;padding:18px 22px;border-radius:12px;background:linear-gradient(120deg,rgba(169,191,166,.07),rgba(19,26,27,.6));border:1px solid var(--line-sage)}
+  .addon .at{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--sage);margin-bottom:6px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .addon .at b{font-family:'Bebas Neue';font-style:normal;font-size:22px;color:var(--gold);letter-spacing:.02em}
+  .addon p{font-size:14px;color:var(--paper);line-height:1.6}
+
+  /* ————— BACKBONE ————— */
+  .incl{display:grid;grid-template-columns:repeat(2,1fr);gap:36px}
+  .incl-card .h{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:23px;color:var(--gold);margin-bottom:6px}
+  .incl-card .sub{font-family:'Archivo';font-size:12px;font-weight:400;letter-spacing:.02em;color:var(--sage-2);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line-soft)}
+  .incl-card ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .incl-card li{font-size:14.5px;color:var(--paper);line-height:1.5;padding-left:16px;position:relative}
+  .incl-card li::before{content:'—';position:absolute;left:0;top:0;color:var(--gold);opacity:.6}
+
+  /* ————— STATS STRIP ————— */
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:48px;padding:34px 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat{text-align:center}
+  .stat .n{font-family:'Bebas Neue';font-size:clamp(34px,4.6vw,50px);color:var(--gold);line-height:1;letter-spacing:.02em;text-shadow:0 0 50px rgba(230,193,125,.25)}
+  .stat .l{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14.5px;color:var(--sage-2);margin-top:8px;line-height:1.4}
+
+
+  /* ————— GALLERY (only if using photography) ————— */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px}
+  .gallery figure{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;aspect-ratio:4/3}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s ease}
+  .gallery figure:hover img{transform:scale(1.05)}
+  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 18px 13px;
+    background:linear-gradient(0deg,rgba(13,17,19,.94),rgba(13,17,19,.4) 60%,transparent);
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--paper)}
+
+  /* ————— TIMELINE ————— */
+  .timeline{margin-top:10px}
+  .tl-row{display:grid;grid-template-columns:190px 1fr;gap:32px;padding:22px 0;border-bottom:1px solid var(--line-soft);align-items:baseline}
+  .tl-row:last-child{border-bottom:none}
+  .tl-when .date{font-family:'Bebas Neue';font-size:25px;color:var(--gold);letter-spacing:.04em;line-height:1.05}
+  .tl-when .day{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--sage-2)}
+  .tl-what h3{font-family:'Archivo';font-size:17px;font-weight:600;color:var(--ivory);margin-bottom:4px;display:inline-block}
+  .tl-what .star{color:var(--gold);margin-left:8px;font-size:15px}
+  .tl-what p{font-size:14.5px;color:var(--paper);line-height:1.6;max-width:60ch}
+
+  /* ————— VENUE REQS ————— */
+  .reqs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .req{padding:26px 28px;border:1px solid var(--line-sage);border-radius:14px;background:linear-gradient(150deg,rgba(169,191,166,.05),rgba(19,26,27,.5))}
+  .req .rt{font-family:'Archivo';font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--sage);margin-bottom:9px}
+  .req h3{font-family:'Bebas Neue';font-size:25px;color:var(--ivory);letter-spacing:.04em;margin-bottom:9px}
+  .req p{font-size:14.5px;color:var(--paper);line-height:1.65}
+  .req b{color:var(--gold);font-weight:600}
+
+  /* ————— INVESTMENT ————— */
+  .invest{background:linear-gradient(150deg,var(--slate),var(--ink-2));border:1px solid var(--line);border-radius:18px;padding:52px 52px;position:relative;overflow:hidden}
+  .invest::after{content:'';position:absolute;top:-30%;left:76%;transform:translateX(-50%);width:70%;height:160%;background:radial-gradient(closest-side,rgba(230,193,125,.14),transparent);pointer-events:none}
+  .inv-in{position:relative;z-index:1}
+  .inv-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--gold);margin-bottom:6px;text-align:center}
+  .inv-sub{text-align:center;font-size:13.5px;color:var(--sage-2);margin-bottom:22px}
+  .inv-figure{font-family:'Bebas Neue';font-size:clamp(54px,9.4vw,112px);color:var(--gold);line-height:.9;letter-spacing:.01em;text-shadow:0 0 70px rgba(230,193,125,.32);text-align:center}
+  .inv-figure span{font-size:.42em;vertical-align:baseline}
+  .inv-figcap{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--paper);margin-top:12px}
+
+  .inv-lines{max-width:600px;margin:34px auto 0;border-top:1px solid var(--line-soft)}
+  .inv-line{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:14px 2px;border-bottom:1px solid var(--line-soft);font-size:15px}
+  .inv-line .lab{color:var(--paper)}
+  .inv-line .lab small{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13.5px;color:var(--sage-2);margin-top:2px}
+  .inv-line .val{font-family:'Archivo';font-weight:400;color:var(--ivory);white-space:nowrap}
+  .inv-line.sub-line .lab{padding-left:16px;font-size:14px;color:var(--mute)}
+  .inv-line.sub-line .val{font-size:14px;color:var(--paper)}
+  .inv-line.tax .val{color:var(--gold)}
+  .inv-line.total{border-bottom:none;padding-top:18px}
+  .inv-line.total .lab{font-family:'Bebas Neue';font-size:22px;letter-spacing:.04em;color:var(--ivory)}
+  .inv-line.total .val{font-family:'Bebas Neue';font-size:26px;letter-spacing:.03em;color:var(--ivory)}
+  .inv-head{font-family:'Archivo';font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);padding:24px 2px 8px;border-bottom:1px solid var(--line-soft)}
+
+  .saved{margin-top:26px;padding:24px 28px;border-radius:14px;background:linear-gradient(120deg,rgba(169,191,166,.08),rgba(19,26,27,.6));border:1px solid var(--line-sage)}
+  .saved .et{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--sage);margin-bottom:8px}
+  .saved p{font-size:14.5px;color:var(--paper);line-height:1.66;max-width:68ch}
+  .saved b{color:var(--gold);font-weight:600}
+  .inv-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--sage-2);margin-top:22px;text-align:center;line-height:1.6}
+
+  /* ————— GOOD TO KNOW ————— */
+  .gtk{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .gtk-item .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--gold);display:block;margin-bottom:6px}
+  .gtk-item h3{font-family:'Bebas Neue';font-size:23px;color:var(--ivory);letter-spacing:.04em;margin-bottom:8px}
+  .gtk-item p{font-size:14.5px;color:var(--paper);line-height:1.64}
+
+  /* ————— CLOSE ————— */
+  .close{text-align:center;padding:88px 0 64px}
+  .close h2{font-size:clamp(36px,5.8vw,74px);max-width:18ch;margin:0 auto;text-shadow:0 0 70px rgba(230,193,125,.18)}
+  .close h2 em{font-style:normal;color:var(--gold)}
+  .close p{font-size:17px;color:var(--sage-2);max-width:54ch;margin:22px auto 38px;line-height:1.7}
+  .sig{display:inline-flex;flex-direction:column;align-items:center;gap:4px;padding-top:32px;border-top:1px solid var(--line);margin-top:6px}
+  .sig .nm{font-family:'Bebas Neue';font-size:28px;color:var(--ivory);letter-spacing:.08em}
+  .sig .rl{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--gold)}
+  .sig .ct{font-family:'Archivo';font-size:13px;color:var(--sage-2);margin-top:9px;font-weight:300}
+
+  footer{border-top:1px solid var(--line-soft);padding:26px 0}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--sage-2)}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:800px){
+    .wrap{padding:0 22px}
+    .logo img{width:112px}
+    .promise-row{grid-template-columns:1fr;gap:32px}
+    .room-inner{padding:28px 24px}
+    .room-media{min-height:190px}
+    .room-head{flex-direction:column;gap:14px}
+    .room-price{text-align:left}
+    .spec{grid-template-columns:1fr;gap:22px}
+    .incl{grid-template-columns:1fr;gap:30px}
+    .reqs{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr);gap:28px 18px;padding:28px 0}
+    .gallery{grid-template-columns:1fr;gap:12px}
+    .gtk{grid-template-columns:1fr;gap:24px}
+    .hero-foot{gap:22px}
+    .invest{padding:36px 22px}
+    .tl-row{grid-template-columns:1fr;gap:8px;padding:18px 0}
+    .tl-when{display:flex;align-items:baseline;gap:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .room:hover{transform:none}
+  }
+</style>
+<meta name="robots" content="noindex,nofollow"><style>figure.board{margin:32px 0}figure.board img{display:block;width:100%;height:auto;border:1px solid #494638}figcaption{font-size:13px;line-height:1.6;color:var(--sage-2);margin:12px 0 0}.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.proof-grid figure{margin:0}.proof-grid img{width:100%;height:auto}.options{margin:28px 0;display:grid;gap:16px}.option{display:flex;align-items:flex-start;gap:14px;padding:20px;border:1px solid var(--line);cursor:pointer}.option input{width:22px;height:22px;accent-color:#c9a86c;flex-shrink:0}.option small{display:block;margin-top:6px;color:var(--sage-2)}.jump{display:flex;gap:25px;flex-wrap:wrap;margin-top:28px}.jump a{color:var(--gold)}.drawing-link{display:block;color:var(--gold);margin-top:8px}.reveal{opacity:1;transform:none}@media(max-width:700px){.proof-grid{grid-template-columns:1fr}.inv-figure{font-size:48px}}</style></head><body><div class="glow"></div><div class="grain"></div><header class="hero"><div class="hero-bg"></div><div class="wrap" style="width:100%"><div class="topbar"><a class="logo" href="https://limitlesslightsandsound.com"><img src="img/limitless-logo.png" alt="Limitless Lights and Sound"></a><div class="forwhom">prepared for<b>Perfectly Timed Events</b><span>Troublemaker Studios · December 12, 2026</span></div></div><div class="hero-mid"><div class="hero-rule"></div><span class="eyebrow">Entrance lighting + projection · Austin, Texas</span><h1>A walk through<br>light.<br><em>An arrival to remember.</em></h1><p class="hero-lede">An approximately 76-foot Titan tube tunnel, architectural projection on the entrance arch, and a mapped wall at the end of the experience. Equipment, installation, programming, show operation and removal in one production package.</p><nav class="jump"><a href="#concept">See the concept</a><a href="#drawings">View the drawings</a><a href="#investment">Explore pricing</a></nav></div><div class="hero-foot"><div class="hf"><div class="k">the event</div><div class="v">December 12 · 5 PM–midnight</div></div><div class="hf"><div class="k">the package</div><div class="v">18 portals · 4 projectors</div></div><div class="hf"><div class="k">proposal</div><div class="v">Budget for review · November 9, 2026</div></div></div></div></header>
+<section id="concept"><div class="wrap"><span class="eyebrow sec-eyebrow">The look</span><h2 class="sec-title">Color, movement and a strong entrance.</h2><p class="sec-intro">A continuous sequence of rectangular portals creates depth along the guest approach. Coordinated lighting and projection carry the look from the tunnel to the architecture.</p><figure class="board"><img src="img/concepts.png" alt="Two AI-generated entrance concepts in cyan and magenta showing a tube tunnel and architectural projection"><figcaption>AI-generated concept renders, provided as color and atmosphere references. These are not photographs of this installation. The line drawings below show the current 18-portal design basis.</figcaption></figure></div></section>
+<section id="rooms"><div class="wrap"><span class="eyebrow sec-eyebrow">Included production</span><h2 class="sec-title">The complete entrance package.</h2><div class="incl"><div class="incl-card"><div class="h">Tunnel + front lighting</div><ul><li>18 portals, approximately 12′ wide × 10′ high, at nominal 4.5′ centers</li><li>162 installed Titan tubes: three across each header and three on each side, with intentional gaps</li><li>176 tubes supplied, including spares; Schedule 40 frames, bases and ballast</li><li>Two Pluto Fresnels on combo stands for the front of the tunnel</li><li>grandMA3 onPC control and LumenRadio Stardust wireless control</li></ul></div><div class="incl-card"><div class="h">Projection + infrastructure</div><ul><li>Four Epson 13,000-lumen projectors: two for the arch and two for the 54′ × 20′ wall</li><li>Lens package, truss towers and 24″ projector top plates</li><li>Media server, basic branded motion content and on-site mapping</li><li>Generator and fuel allowance, 120/208V distribution, Socapex, True1 and SDI cable</li><li>Cable crossovers, installation crew, lighting and projection operators, delivery and strike</li></ul></div></div></div></section>
+<section id="drawings"><div class="wrap"><span class="eyebrow sec-eyebrow">The arrangement</span><h2 class="sec-title">A clearer view of the build.</h2><p class="sec-intro">Front elevation, overhead layout and a line-drawing perspective show the rectangular portal approach. The projector map illustrates the two separate mapping targets.</p><figure class="board"><img loading="lazy" src="drawings/L01-tunnel-plan.svg" alt="Tunnel front elevation and overhead plan"><figcaption>Tunnel front elevation and overhead plan. Preliminary concept drawing.</figcaption><a class="drawing-link" href="drawings/L01-tunnel-plan.svg" target="_blank">Open full-size drawing ↗</a></figure><figure class="board"><img loading="lazy" src="drawings/L02-tunnel-perspective.svg" alt="Line drawing perspective of eighteen rectangular tunnel portals"><figcaption>Line drawing perspective of eighteen rectangular tunnel portals. Preliminary concept drawing.</figcaption><a class="drawing-link" href="drawings/L02-tunnel-perspective.svg" target="_blank">Open full-size drawing ↗</a></figure><figure class="board"><img loading="lazy" src="drawings/V01-projection-map.svg" alt="Illustrative diagram of two arch projectors and two wall projectors"><figcaption>Illustrative diagram of two arch projectors and two wall projectors. Preliminary concept drawing.</figcaption><a class="drawing-link" href="drawings/V01-projection-map.svg" target="_blank">Open full-size drawing ↗</a></figure></div></section><section id="work"><div class="wrap"><span class="eyebrow sec-eyebrow">Completed Limitless work</span><h2 class="sec-title">From our portfolio.</h2><figure class="board"><img loading="lazy" src="img/redbull-tunnel.jpg" alt="Completed red-lit tunnel at Red Monday for Red Bull"><figcaption>Red Monday / Red Bull — completed Limitless production. This previous installation uses a different frame geometry from the rectangular design proposed here. Photos courtesy of Julian Bajsel &amp; Black&amp;Tan Collective. <a href="https://limitlesslightsandsound.com/blog/portfolio/red-monday-red-bull/">View project</a>.</figcaption></figure><div class="proof-grid"><figure><img loading="lazy" src="img/mapping-01.jpg" alt="Completed Limitless architectural projection mapping with racing graphics"><figcaption>Completed architectural mapping — entrance detail.</figcaption></figure><figure><img loading="lazy" src="img/mapping-02.jpg" alt="Completed wide architectural mapping with checkerboard and racing car imagery"><figcaption>Completed architectural mapping — full façade.</figcaption></figure></div></div></section>
+<section id="schedule"><div class="wrap"><span class="eyebrow sec-eyebrow">Production schedule</span><h2 class="sec-title">Build, align, operate.</h2><div class="timeline"><div class="tl-row"><div class="tl-when"><div class="date">DEC 11</div></div><div class="tl-what"><h3>Installation + after-dark alignment</h3><p>Tunnel construction, power and signal distribution, fixture testing and projection alignment.</p></div></div><div class="tl-row"><div class="tl-when"><div class="date">DEC 12</div></div><div class="tl-what"><h3>Final checks + show operation</h3><p>Lighting and projection crew on site. Event runs 5 PM–midnight.</p></div></div><div class="tl-row"><div class="tl-when"><div class="date">DEC 13</div></div><div class="tl-what"><h3>Overnight strike + collection</h3><p>Removal after the event, subject to venue approval of overnight access.</p></div></div></div></div></section>
+<section id="investment"><div class="wrap"><div class="invest"><div class="inv-in"><div class="inv-label">Your production options</div><div class="inv-sub">Selected package · before tax</div><div class="inv-figure" id="selected-price">$56,006.00</div><div class="inv-figcap" id="selected-scope">18 portals · 162 installed tubes · arch + wall projection</div><div class="options"><label class="option"><input id="extra" type="checkbox"><span>Add four tunnel portals — <b>+$6,880.70</b><small>22 portals, 198 installed tubes and approximately 94.5′ first-to-last. Includes added installation and strike. Subject to available route length.</small></span></label><label class="option"><input id="remove-wall" type="checkbox"><span>Arch projection only — <b>−$3,229.00</b><small>Removes both wall projectors and their dedicated support and content work. Arch projection, shared power, media server and show operation remain.</small></span></label></div><div class="inv-lines"><div class="inv-head">Base package breakdown · before options</div><div class="inv-line"><div class="lab">Tunnel frames, Titan tubes + front lighting</div><div class="val">$24,173.00</div></div><div class="inv-line"><div class="lab">Arch + wall projection equipment</div><div class="val">$5,458.00</div></div><div class="inv-line"><div class="lab">Power, media server + control</div><div class="val">$7,295.00</div></div><div class="inv-line"><div class="lab">Production crew, programming + content</div><div class="val">$16,080.00</div></div><div class="inv-line"><div class="lab">Delivery + collection</div><div class="val">$3,000.00</div></div><div class="inv-head">Your selection</div><div class="inv-line"><div class="lab">Subtotal</div><div class="val" id="subtotal">$56,006.00</div></div><div class="inv-line tax"><div class="lab">Estimated sales tax</div><div class="val" id="tax">$3,774.05</div></div><div class="inv-line total"><div class="lab">Total including tax</div><div class="val" id="total" aria-live="polite">$59,780.05</div></div></div><div class="inv-note">Budget proposal for the scope shown. Options update the estimate only and do not submit an order. Final pricing and availability will be confirmed with the approved layout.</div></div></div></div></section>
+<section id="terms"><div class="wrap"><span class="eyebrow sec-eyebrow">Before final design</span><h2 class="sec-title">A few site details to confirm.</h2><div class="gtk"><div class="gtk-item"><span class="lead">projection</span><h3>Measure the full arch face</h3><p>The 15′ × 15′ dimension describes the opening only. Exterior dimensions, projector locations and sightlines determine final lens selection and coverage. Mapping is designed for after-dark viewing.</p></div><div class="gtk-item"><span class="lead">layout</span><h3>Confirm the route and access</h3><p>The base layout spans 76.5′ from first to last portal. Final centers, clear passage, ballast and weather protection will be coordinated on site. Guest flow remains subject to the venue’s approved access plan.</p></div><div class="gtk-item"><span class="lead">content</span><h3>Build around your artwork</h3><p>Basic branded motion content and mapping are included. Final logos, artwork and creative direction are needed before programming; elaborate custom animation can be scoped separately.</p></div></div></div></section><section class="close"><div class="wrap"><h2>Let’s shape the <em>arrival.</em></h2><p>Choose the tunnel length and projection scope that fit the event. We’ll finalize the layout and production details around that selection.</p><div class="sig"><div class="nm">Limitless Lights + Sound</div><div class="rl">Lighting · Video · Production</div></div></div></section><footer><div class="wrap"><div class="foot-in"><span>Limitless Lights + Sound</span><span>Prepared for Perfectly Timed Events</span><span>Budget proposal · November 9, 2026</span></div></div></footer><script>
+const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(n/100);
+function update(){const extra=document.getElementById('extra').checked,remove=document.getElementById('remove-wall').checked;const sub=5600600+(extra?688070:0)-(remove?322900:0),tax=377405+(extra?50991:0)-(remove?22143:0);document.getElementById('selected-price').textContent=money(sub);document.getElementById('subtotal').textContent=money(sub);document.getElementById('tax').textContent=money(tax);document.getElementById('total').textContent=money(sub+tax);document.getElementById('selected-scope').textContent=`${extra?22:18} portals · ${extra?198:162} installed tubes · ${remove?'arch projection only':'arch + wall projection'}`;}
+document.querySelectorAll('.options input').forEach(el=>el.addEventListener('change',update));update();
+</script></body></html>
